@@ -1,24 +1,32 @@
-## Introduction
+## Introduction (Round 0)
 
 
-<b>Discipline | <b>Fill your discipline name here
+<b>Discipline | <b>Physical Sciences
 :--|:--|
-<b> Lab | <b> Fill your lab name here
-<b> Experiment|     <b> Fill your experiment name and number here
+<b> Lab | <b> Basics of Physics
+<b> Experiment|     <b> 5. Measurement of focal length of the combination of the two lenses separated by a distance
 
-### About the Experiment 
+<h5> About the Experiment : </h5> <br>
 
-Fill a brief description of this experiment here
+Focal length of combination of two lenses separated by distance‘d’ apart is given by 
 
-<b>Name of Developer | <b> Fill the name of experiment owner here 
+1/F= 1/f1 + 1/f2 -d/f1.f2
+
+<b>Name of Developer | <b> Prof Kantesh Balani
 :--|:--|
-<b> Institute | <b>  
-<b> Email id|     <b>  
-<b> Department |  
+<b> Institute | <b> IIT Kanpur
+<b> Email id|     <b> kbalani@iitk.ac.in
+<b> Department | Material Sciecne and Engineering
 
-### Contributors List
+#### Contributors List
 
 SrNo | Name | Faculty or Student | Department| Institute | Email id
 :--|:--|:--|:--|:--|:--|
-1 | . | . | . | . | .
-2 | . | . | . | . | .
+1 | Prof. Kantesh Balani | Faculty | MSE | IIT Kanpur, Kanpur | kbalani@iitk.ac.in
+2 | Abhay Gupta | Student | Information Technology | REC, Banda |abhaypc26@gmail.com
+3 | Praphull Maurya | Student | Information Technology | REC, Banda |praphullmaurya123@gmail.com
+4 | Satish Kumar | Student | Information Technology | REC, Banda |satishkumar7991@gmail.com
+5 | Mohitendra Damailiya | Student | Information Technology | REC, Banda |mohitendra.mpsd@gmail.com
+6 | Narendra Rajpoot | Student | Information Technology | REC, Banda |nrajpoot1146@gmail.com
+
+
