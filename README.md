@@ -8,7 +8,7 @@
 
 <h5> About the Experiment : </h5> <br>
 
-Focal length of combination of two lenses separated by distance‘d’ apart is given by 
+Focal length of combination of two lenses separated by distance‘d’ apart is given by,
 
 1/F= 1/f1 + 1/f2 -d/f1.f2
 
