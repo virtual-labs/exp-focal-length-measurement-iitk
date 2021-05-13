@@ -16,4 +16,22 @@
 		"d": "+105cm"
 	},
 	"correctAnswer": "c"
+}, {
+	"question": "If a concave lens of greater power as compared to the convex lens is kept in the combination such that the distance d =0, then the lens combination will work as:",
+	"answers": {
+		"a": "Convex lens",
+		"b": "Plane glass plate",
+		"c": "Concave lens",
+		"d": "NOT"
+	},
+	"correctAnswer": "c"
+}, {
+	"question": "On increasing the distance between the lenses the focal length of the combination:",
+	"answers": {
+		"a": "decreases",
+		"b": "increases",
+		"c": "remains same",
+		"d": "NOT"
+	},
+	"correctAnswer": "b"
 }]

@@ -19,17 +19,17 @@
                 // ...add an HTML radio button
                 answers.push(
                     `<label>
-            <input type="radio" name="question${questionNumber}" value="${letter}">
-            ${letter} :
-            ${currentQuestion.answers[letter]}
-          </label>`
+          <input type="radio" name="question${questionNumber}" value="${letter}">
+          ${letter} :
+          ${currentQuestion.answers[letter]}
+        </label>`
                 );
             }
 
             // add this question and its answers to the output
             output.push(
                 `<div class="question"> ${currentQuestion.question} </div>
-        <div class="answers"> ${answers.join("")} </div>`
+      <div class="answers"> ${answers.join("")} </div>`
             );
         });
 
@@ -89,55 +89,49 @@
 
 
     const myQuestions = [{
-            question: "Focal length of the lens A is?", ///// Write the question inside double quotes
+            question: "1.Focal length of the lens A is?", ///// Write the question inside double quotes
             answers: {
                 a: "+60cm", ///// Write the option 1 inside double quotes
                 b: "+40cm", ///// Write the option 2 inside double quotes
-                c: "+65cm", ///// Write the option 3 inside double quotes
-                d: "+70cm" ///// Write the option 4 inside double quotes
+                c: "+65cm", ///// Write the option 2 inside double quotes
+                d: "+70cm", ///// Write the option 2 inside double quotes
             },
             correctAnswer: "a" ///// Write the correct option inside double quotes
         },
 
-        {
-            question: "Focal length of the lens B is?", ///// Write the question inside double quotes
-            answers: {
-                a: "+120cm", ///// Write the option 1 inside double quotes
-                b: "+90cm", ///// Write the option 2 inside double quotes
-                c: "+100cm", ///// Write the option 3 inside double quotes
-                d: "+105cm" ///// Write the option 4 inside double quotes
-            },
-            correctAnswer: "c" ///// Write the correct option inside double quotes
-        }, ///// To add more questions, copy the section below 
-        ///// this line
+    {
+      question: "Focal length of the lens B is?",  ///// Write the question inside double quotes
+      answers: {
+        a: "+120cm",                  ///// Write the option 1 inside double quotes
+        b: "+90cm",                  ///// Write the option 2 inside double quotes
+        c: "+100cm",
+        d: "+105cm",
+      },
+      correctAnswer: "c"                ///// Write the correct option inside double quotes
+    },
+                         {
+      question: "If a concave lens of greater power as compared to the convex lens is kept in the combination such that the distance d =0, then the lens combination will work as:",  ///// Write the question inside double quotes
+      answers: {
+        a: "Convex lens	",                  ///// Write the option 1 inside double quotes
+        b: "Plane glass plate",                  ///// Write the option 2 inside double quotes
+        c: "Concave lens",
+        d: "NOT",
+      },
+      correctAnswer: "c"                ///// Write the correct option inside double quotes
+    },
+                         {
+      question: "On increasing the distance between the lenses the focal length of the combination:",  ///// Write the question inside double quotes
+      answers: {
+        a: "decreases",                  ///// Write the option 1 inside double quotes
+        b: "increases",                  ///// Write the option 2 inside double quotes
+        c: "remains same",
+        d: "NOT",
+      },
+      correctAnswer: "b"                ///// Write the correct option inside double quotes
+    },
 
 
-        /* To add more MCQ's, copy the below section, starting from open curly braces ( { )
-            till closing curly braces comma ( }, )
-
-            and paste it below the curly braces comma ( below correct answer }, ) of above 
-            question
-
-        Copy below section
-
-        {
-          question: "This is question n?",
-          answers: {
-            a: "Option 1",
-            b: "Option 2",
-            c: "Option 3",
-            d: "Option 4"
-          },
-          correctAnswer: "c"
-        },
-
-        Copy above section
-
-        */
-
-
-
-
+        
     ];
 
 
