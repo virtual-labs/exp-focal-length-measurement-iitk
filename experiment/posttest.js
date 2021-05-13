@@ -91,10 +91,10 @@
     const myQuestions = [{
             question: "1.Focal length of the lens A is?", ///// Write the question inside double quotes
             answers: {
-                a: "+60cm", ///// Write the option 1 inside double quotes
-                b: "+40cm", ///// Write the option 2 inside double quotes
-                c: "+65cm", ///// Write the option 2 inside double quotes
-                d: "+70cm", ///// Write the option 2 inside double quotes
+                a: "+60 cm", ///// Write the option 1 inside double quotes
+                b: "+40 cm", ///// Write the option 2 inside double quotes
+                c: "+65 cm", ///// Write the option 2 inside double quotes
+                d: "+70 cm", ///// Write the option 2 inside double quotes
             },
             correctAnswer: "a" ///// Write the correct option inside double quotes
         },
@@ -102,10 +102,10 @@
     {
       question: "Focal length of the lens B is?",  ///// Write the question inside double quotes
       answers: {
-        a: "+120cm",                  ///// Write the option 1 inside double quotes
-        b: "+90cm",                  ///// Write the option 2 inside double quotes
-        c: "+100cm",
-        d: "+105cm",
+        a: "+120 cm",                  ///// Write the option 1 inside double quotes
+        b: "+90 cm",                  ///// Write the option 2 inside double quotes
+        c: "+100 cm",
+        d: "+105 cm",
       },
       correctAnswer: "c"                ///// Write the correct option inside double quotes
     },

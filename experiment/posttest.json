@@ -1,19 +1,19 @@
 [{
 	"question": "Focal length of the lens A is?",
 	"answers": {
-		"a": "+60cm",
-		"b": "+40cm",
-		"c": "+65cm",
-		"d": "+70cm"
+		"a": "+60 cm",
+		"b": "+40 cm",
+		"c": "+65 cm",
+		"d": "+70 cm"
 	},
 	"correctAnswer": "a"
 }, {
 	"question": "Focal length of the lens B is?",
 	"answers": {
-		"a": "+120cm",
-		"b": "+90cm",
-		"c": "+100cm",
-		"d": "+105cm"
+		"a": "+120 cm",
+		"b": "+90 cm",
+		"c": "+100 cm",
+		"d": "+105 cm"
 	},
 	"correctAnswer": "c"
 }, {
