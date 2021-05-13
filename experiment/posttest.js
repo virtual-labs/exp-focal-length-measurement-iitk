@@ -89,21 +89,45 @@
 
 
     const myQuestions = [{
-            question: "1.This is a sample question:", ///// Write the question inside double quotes
+            question: "1.Focal length of the lens A is?", ///// Write the question inside double quotes
             answers: {
-                a: "This is a sample answer A", ///// Write the option 1 inside double quotes
-                b: "This is a sample answer B", ///// Write the option 2 inside double quotes
+                a: "+60cm", ///// Write the option 1 inside double quotes
+                b: "+40cm", ///// Write the option 2 inside double quotes
+                c: "+65cm", ///// Write the option 2 inside double quotes
+                d: "+70cm", ///// Write the option 2 inside double quotes
             },
             correctAnswer: "a" ///// Write the correct option inside double quotes
         },
 
     {
-      question: "<img src='images/8.PNG'><br>Identify the location of Secondary electron detector",  ///// Write the question inside double quotes
+      question: "Focal length of the lens B is?",  ///// Write the question inside double quotes
       answers: {
-        a: "<img src='images/1b.png'>",                  ///// Write the option 1 inside double quotes
-        b: "<img src='images/1a.png'>",                  ///// Write the option 2 inside double quotes
-        c: "<img src='images/1c.PNG'>",      },
+        a: "+120cm",                  ///// Write the option 1 inside double quotes
+        b: "+90cm",                  ///// Write the option 2 inside double quotes
+        c: "+100cm",
+        d: "+105cm",
+      },
       correctAnswer: "c"                ///// Write the correct option inside double quotes
+    },
+                         {
+      question: "If a concave lens of greater power as compared to the convex lens is kept in the combination such that the distance d =0, then the lens combination will work as:",  ///// Write the question inside double quotes
+      answers: {
+        a: "Convex lens	",                  ///// Write the option 1 inside double quotes
+        b: "Plane glass plate",                  ///// Write the option 2 inside double quotes
+        c: "Concave lens",
+        d: "NOT",
+      },
+      correctAnswer: "c"                ///// Write the correct option inside double quotes
+    },
+                         {
+      question: "On increasing the distance between the lenses the focal length of the combination:",  ///// Write the question inside double quotes
+      answers: {
+        a: "decreases",                  ///// Write the option 1 inside double quotes
+        b: "increases",                  ///// Write the option 2 inside double quotes
+        c: "remains same",
+        d: "NOT",
+      },
+      correctAnswer: "b"                ///// Write the correct option inside double quotes
     },
 
 
