@@ -96,7 +96,7 @@
                 c: "2f and ∞", ///// Write the option 2 inside double quotes
                 d: "at focus", ///// Write the option 2 inside double quotes
             },
-            correctAnswer: "a" ///// Write the correct option inside double quotes
+            correctAnswer: "b" ///// Write the correct option inside double quotes
         },
 
     {
