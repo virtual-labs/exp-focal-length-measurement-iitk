@@ -1,13 +1,336 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+<html lang="en">
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Focal Length</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/focal.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/focal.css">
+    <style>
+        table,
+        th,
+        td {
+            padding-right: 20px;
+            border: 3px solid gray;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="block">
+        <div>
+            <h2> Measurement of focal length of the combination of two lenses separated by a distance</h2>
+        </div>
+        <div class="container-fluid mt-3">
+            <div class="row">
+                <div class="col-xs-8 ml-4">
+                    <div><canvas id="mycanvas" style="border: 3px solid rgba(48, 10, 36, 1) ;border-radius: 20px;
+                    margin: 10px 0 0 0px" width="950" height="450"></canvas>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="row convex mr-1">
+                        <div class="row">
+                            <div class="col-sm-6 pl-3 pr-2">
+                                <button style="width: 118px" vlab-action="START_SIMULATOR" type="submit" id="poweron" class="btn btn-sm btn-warning ">Turn On </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button style="width: 90px" vlab-action="STOP_SIMULATOR" type="submit" id="poweroff" class="btn btn-sm btn-danger">Turn Off</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-8 pl-3">
+                                <button style="width: 120px" vlab-action="OPTICAL_BENCH" type="submit" id="bench1" class="btn btn-sm btn-primary">Optical
+                                    Bench</button>
+                            </div>
+                            <div class="col-xs-4 pl-1 ">
+                                <button type="submit" vlab-action="DRAW_OBJECT" style="width: 90px" id="object1" class="btn btn-sm btn-primary">
+                                    Object</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 pl-3 ">
+                                <button type="submit" style="width: 120px" vlab-action="PLACE_LENS_A" id="lens1" class="btn btn-sm btn-primary">Place Lens
+                                    A</button>
+                            </div>
+                            <div class="col-xs-4 pl-1">
+                                <button type="submit" vlab-action="ADD_LENS_A" style="width: 43px" id="add1" class="btn btn-sm btn-dark">+</button>
+                            </div>
+                            <div class="col-xs-2 pl-1">
+                                <button type="submit" vlab-action="SUB_LENS_A" style="width: 43px" id="sub1" class="btn btn-sm btn-dark">-</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-8 pl-3">
+                                <button type="submit" vlab-action="PLACE_LENS_B" style="width: 120px" id="lens2" class="btn btn-sm btn-primary">Place Lens
+                                    B</button>
+                            </div>
+                            <div class="col-xs-2 pl-1">
+                                <button type="submit" vlab-action="ADD_LENS_B" style="width: 43px" id="add2" class="btn btn-sm btn-dark">+</button>
+                            </div>
+                            <div class="col-xs-2 pl-1">
+                                <button type="submit" vlab-action="SUB_LENS_B" style="width: 43px" id="sub2" class="btn btn-sm btn-dark">-</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-8 pl-3">
+                                <button type="sumbit" style="width: 120px" vlab-action="PLACE_BOTH_LENS" id="bothlens" class="btn btn-sm btn-primary">Place both Lens</button>
+                            </div>
+                            <div class="col-xs-4 pl-1 align-items-center">
+                                <button style="width: 90px" vlab-action="RESET" type="submit" id="reset1" class="btn btn-sm btn-danger">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mr-1" style="height: max-content; float: right">
+                        <div class="col pl-0 pr-0" style="border: 0px inset green; box-shadow: 0px 0px 20px #bbb; background-color:white;">
+                            <h5 class="text-center mb-0" style=" font-size: 15px; width: 240px; background-color: black; color: white; box-shadow: 0px 3px 20px #bbb">
+                                Message</h5>
+                            <div id="terminal">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin: 0px 20px 20px 20px; align-items: center">
+        <hr>
+        <h4>Table A :: Calculate the Focal Length of the Lens A</h4>
+        <hr>
+        <div>
+            <table style="width: 320px; margin: auto;border: none;">
+                <tr style="border: none">
+                    <td style="border: none">
+                        <h6> Use the Lens Formula, </h6>
+                    </td>
+                    <td style="border: none;">
+                        <h6><img src="image/lensf.jpg"></img>
+                        </h6>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <table width="100%" style="border: 2px solid gray; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th rowspan="1">S. No.</th>
+                    <th rowspan="1">Object Distance(in cm)</th>
+                    <th rowspan="1">Image Distance(in cm)</th>
+                    <th rowspan="1">Focal Length(f<sub>1</sub> in cm)</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td><input type="text" id="u11"></td>
+                    <td><input type="text" id="v11"></td>
+                    <td id="f11"></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><input type="text" id="u12"></td>
+                    <td><input type="text" id="v12"></td>
+                    <td id="f12"></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td><input type="text" id="u13"></td>
+                    <td><input type="text" id="v13"></td>
+                    <td id="f13"></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td><input type="text" id="u14"></td>
+                    <td><input type="text" id="v14"></td>
+                    <td id="f14"></td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td><input type="text" id="u15"></td>
+                    <td><input type="text" id="v15"></td>
+                    <td id="f15"></td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                    <td style="font-weight: bold;">Mean f<sub>1</sub>=<span id="meanf1"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <div>
+            <a style="background-color: rgba(48, 10, 36, 1); border-radius:3px;width: 50px; margin: 200px 0px 0px 600px;
+                        height: 30px; color:white;cursor: pointer;font-size: 20px;padding:5px 10px 5px 10px;" onclick="calcf1()">Calculate f<sub>1</sub></a>
+        </div>
+        <hr>
+
+        <h4>Table B :: Calculate the Focal Length of the Lens B</h4>
+        <hr>
+        <div>
+            <table style="width: 320px; margin: auto;border: none;">
+                <tr style="border: none">
+                    <td style="border: none">
+                        <h6> Use the Lens Formula, </h6>
+                    </td>
+                    <td style="border: none;">
+                        <h6> <img src="image/lensf.jpg"></img>
+                        </h6>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <table width="100%" style="border: 2px solid gray;
+        border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th rowspan="1">S. No.</th>
+                    <th rowspan="1">Object Distance(in cm)</th>
+                    <th rowspan="1">Image Distance(in cm)</th>
+                    <th rowspan="1">Focal Length(f<sub>2</sub> in cm)</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td><input type="text" id="u21"></td>
+                    <td><input type="text" id="v21"></td>
+                    <td id="f21"></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><input type="text" id="u22"></td>
+                    <td><input type="text" id="v22"></td>
+                    <td id="f22"></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td><input type="text" id="u23"></td>
+                    <td><input type="text" id="v23"></td>
+                    <td id="f23"></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td><input type="text" id="u24"></td>
+                    <td><input type="text" id="v24"></td>
+                    <td id="f24"></td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td><input type="text" id="u25"></td>
+                    <td><input type="text" id="v25"></td>
+                    <td id="f25"></td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                    <td style="font-weight: bold;">Mean f<sub>2</sub>=<span id="meanf2"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <div>
+            <a style="background-color: rgba(48, 10, 36, 1); border-radius:3px;width: 50px; margin: 200px 0px 0px 600px;
+                        height: 30px; color:white;cursor: pointer;font-size: 20px;padding:5px 10px 5px 10px;" onclick="calcf2()">Calculate f<sub>2</sub></a>
+        </div>
+        <hr>
+        <h4>Table C :: Calculate the Focal Length of the Combination of lens A and B</h4>
+        <hr>
+        <div>
+            <table style="width: 560px; margin: auto;border: none;">
+                <tr style="border: none">
+                    <td style="border: none">
+                        <h6> Use the Combined Focal Length Formula, </h6>
+                    </td>
+                    <td style="border: none;">
+
+                        <h6><img src="image/bothlensf.jpg"></img>
+                        </h6>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <table width="100%" style="border: 2px solid gray;
+        border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th rowspan="1">S. No.</th>
+                    <th rowspan="1">Focal length of Lens A(f<sub>1</sub> in cm)</th>
+                    <th rowspan="1">Focal length of Lens B(f<sub>2</sub> in cm)</th>
+                    <th rowspan="1">Distance b/w two Lenses(d in cm)</th>
+                    <th rowspan="1">Combined Focal Length(F in cm)</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td><input type="text" id="f11"></td>
+                    <td><input type="text" id="f21"></td>
+                    <td><input type="text" id="d1"></td>
+                    <td><input type="text" id="F1"></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><input type="text" id="f12"></td>
+                    <td><input type="text" id="f22"></td>
+                    <td><input type="text" id="d2"></td>
+                    <td><input type="text" id="F2"></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td><input type="text" id="f13"></td>
+                    <td><input type="text" id="f23"></td>
+                    <td><input type="text" id="d3"></td>
+                    <td><input type="text" id="F3"></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td><input type="text" id="f14"></td>
+                    <td><input type="text" id="f24"></td>
+                    <td><input type="text" id="d4"></td>
+                    <td><input type="text" id="F4"></td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td><input type="text" id="f15"></td>
+                    <td><input type="text" id="f25"></td>
+                    <td><input type="text" id="d5"></td>
+                    <td><input type="text" id="F5"></td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="font-weight: bold;">Mean F=<input type="text" id="meanF"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table style="width: 100%; margin: auto;border: none;">
+            <tr style="border: none">
+                <td style="border: none; align-items: center;">
+                    <a style="background-color: rgba(48, 10, 36, 1); border-radius:3px;width: 50px; margin: 0px 0px 0px 400px;
+                        height: 30px; color:white;cursor: pointer;font-size: 20px;padding:5px 10px 5px 10px;" onclick="calcF()">Verify Mean F</a>
+                    <a style="background-color: rgba(48, 10, 36, 1); border-radius:3px;width: 50px; margin: 200px 0px 0px 20px;
+                        height: 30px; color:white;cursor: pointer;font-size: 20px;padding:5px 10px 5px 10px;" onclick="verifyF()">% Error(in F)</a>
+                </td>
+                <td style="border: none;">
+                    <p id="verify"></p>
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
+
 </html>
