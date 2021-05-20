@@ -89,7 +89,7 @@
 
 
      const myQuestions = [{
-            question: "Convex lens forms real, inverted and magnified image of any object if object is placed between: ", ///// Write the question inside double quotes
+            question: "1. Convex lens forms real, inverted and magnified image of any object if object is placed between: ", ///// Write the question inside double quotes
             answers: {
                 a: "Pole of the lens and focus", ///// Write the option 1 inside double quotes
                 b: "f and 2f", ///// Write the option 2 inside double quotes
@@ -100,7 +100,7 @@
         },
 
     {
-      question: "If d = f1 + f2 then F =?",  ///// Write the question inside double quotes
+      question: "2. If d = f1 + f2 then F =?",  ///// Write the question inside double quotes
       answers: {
         a: "0",                  ///// Write the option 1 inside double quotes
         b: "f<sub>1</sub>",                  ///// Write the option 2 inside double quotes
@@ -110,7 +110,7 @@
       correctAnswer: "d"                ///// Write the correct option inside double quotes
     },
                           {
-      question: "On decreasing the distance between the lenses the power of the combination:",  ///// Write the question inside double quotes
+      question: "3. On decreasing the distance between the lenses the power of the combination:",  ///// Write the question inside double quotes
       answers: {
         a: "decreases",                  ///// Write the option 1 inside double quotes
         b: "increases",                  ///// Write the option 2 inside double quotes
@@ -119,7 +119,7 @@
       correctAnswer: "b"                ///// Write the correct option inside double quotes
     },
                           {
-      question: "The real image formed by the first lens works as -------- for the second lens.",  ///// Write the question inside double quotes
+      question: "4. The real image formed by the first lens works as -------- for the second lens.",  ///// Write the question inside double quotes
       answers: {
         a: "Image",                  ///// Write the option 1 inside double quotes
         b: "object",                  ///// Write the option 2 inside double quotes
