@@ -8,7 +8,7 @@
 <b>Discipline | <b>Physical Sciences
 :--|:--|
 <b> Lab | <b> Basics of Physics
-<b> Experiment|     <b> 6.Measurement of focal length of the combination of two lenses separated by a distance. 
+<b> Experiment|     <b> 5.Measurement of focal length of the combination of two lenses separated by a distance. 
 
 <h4> [1. Focus Area](#LO)
 <h4> [2. Learning Objectives ](#LO)
