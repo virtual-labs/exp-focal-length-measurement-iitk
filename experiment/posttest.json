@@ -1,5 +1,5 @@
 [{
-	"question": "Focal length of the lens A is?",
+	"question": "1. Focal length of the lens A is?",
 	"answers": {
 		"a": "+60 cm",
 		"b": "+40 cm",
@@ -8,7 +8,7 @@
 	},
 	"correctAnswer": "a"
 }, {
-	"question": "Focal length of the lens B is?",
+	"question": "2. Focal length of the lens B is?",
 	"answers": {
 		"a": "+120 cm",
 		"b": "+90 cm",
@@ -17,7 +17,7 @@
 	},
 	"correctAnswer": "c"
 }, {
-	"question": "If a concave lens of greater power as compared to the convex lens is kept in the combination such that the distance d =0, then the lens combination will work as:",
+	"question": "3. If a concave lens of greater power as compared to the convex lens is kept in the combination such that the distance d =0, then the lens combination will work as:",
 	"answers": {
 		"a": "Convex lens",
 		"b": "Plane glass plate",
@@ -26,7 +26,7 @@
 	},
 	"correctAnswer": "c"
 }, {
-	"question": "On increasing the distance between the lenses the focal length of the combination:",
+	"question": "4. On increasing the distance between the lenses the focal length of the combination:",
 	"answers": {
 		"a": "decreases",
 		"b": "increases",
