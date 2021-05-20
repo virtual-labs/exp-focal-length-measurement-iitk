@@ -1,0 +1,39 @@
+[{
+	"question": "1. Convex lens forms real, inverted and magnified image of any object if object is placed between:",
+	"answers": {
+		"a": "Pole of the lens and focus",
+		"b": "f and 2f",
+		"c": "2f and ∞",
+		"d": "at focus"
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "2. If d = f1 + f2 then F =?",
+	"answers": {
+		"a": "0",
+		"b": "f1",
+		"c": "f2",
+		"d": "∞"
+	},
+	"correctAnswer": "d"
+},
+{
+	"question": "3. On decreasing the distance between the lenses the power of the combination:",
+	"answers": {
+		"a": "decreases",
+		"b": "increases",
+		"c": "remains same",
+		"d": "NOT"
+	},
+	"correctAnswer": "b"
+},
+{
+	"question": "4. The real image formed by the first lens works as -------- for the second lens.",
+	"answers": {
+		"a": "Image",
+		"b": "object",
+		"c": "focus",
+		"d": "NOT"
+	},
+	"correctAnswer": "b"
+}]
