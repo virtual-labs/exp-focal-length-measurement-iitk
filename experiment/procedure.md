@@ -8,3 +8,4 @@
 8.	Note down this focal length value.<br>
 9.	Now press “place lens B” button and repeat the procedure.<br>
 10.	Now press “place both lens” button and again repeat the procedure.<br>
+
